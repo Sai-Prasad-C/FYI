@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fyiproject/screens/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/colors.dart';
 
@@ -82,13 +81,12 @@ class _LoginState extends State<Login> {
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child:  TextField(
-                                  obscureText: false,
+                                child: TextField(
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: " Username",
+                                    hintText: 'Email',
                                     hintStyle: GoogleFonts.montserrat(
-                                      fontWeight: FontWeight.normal,),
+                                        fontWeight: FontWeight.normal,),
                                   ),
                                 ),
                               ),
@@ -121,7 +119,7 @@ class _LoginState extends State<Login> {
                           ),
                           SizedBox(height: 20,),
 
-                          InkWell(child:Container(
+                          Container(
 
 
                             padding: EdgeInsets.only(top: 8,bottom: 8,left: 20,right: 20),
@@ -135,16 +133,6 @@ class _LoginState extends State<Login> {
                               style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.w500,color: Colors.white),
                             ),
-                          
-                          ),
-                          onTap: (() {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Homepage(
-                                          
-                                        )));
-                          }),
                           ),
                           SizedBox(height: 20,),
 

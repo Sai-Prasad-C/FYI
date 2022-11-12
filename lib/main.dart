@@ -1,11 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:fyiproject/screens/home.dart';
 import 'package:fyiproject/screens/login.dart';
 import 'package:fyiproject/screens/opening.dart';
 import 'package:fyiproject/screens/signup.dart';
 import 'package:fyiproject/screens/signupPassword.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -30,8 +31,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Opening(),
-
     );
   }
 }
-
