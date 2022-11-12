@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fyiproject/constants/colors.dart';
+import 'package:fyiproject/screens/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignupPassword extends StatefulWidget {
@@ -95,7 +96,7 @@ class _SignupPasswordState extends State<SignupPassword> {
                                     hintStyle: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.normal,),
                                   ),
-                                  controller: mycontroller,
+                                  //controller: mycontroller,
                                 ),
                               ),
                             ),
@@ -121,26 +122,36 @@ class _SignupPasswordState extends State<SignupPassword> {
                                     hintStyle: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.normal,),
                                   ),
-                                  controller: mycontroller,
+                                  //controller: mycontroller,
                                 ),
                               ),
                             ),
                           ),
                           SizedBox(height: MediaQuery.of(context).size.height *0.05,),
 
-                          Container(
-
-
-                            padding: EdgeInsets.only(top: 8,bottom: 8,left: 20,right: 20),
-
-                            decoration: BoxDecoration(
-                              color: indigodye,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text('SignUp',
-                              // style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),
-                              style: GoogleFonts.montserrat(
-                                  fontWeight: FontWeight.w500,color: Colors.white),
+                          InkWell(
+                            onTap: () => {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => (
+                                          Homepage()
+                                        )))
+                            },
+                            child: Container(
+                          
+                          
+                              padding: EdgeInsets.only(top: 8,bottom: 8,left: 20,right: 20),
+                          
+                              decoration: BoxDecoration(
+                                color: indigodye,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text('SignIn',
+                                // style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),
+                                style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,color: Colors.white),
+                              ),
                             ),
                           ),
                           SizedBox(height: MediaQuery.of(context).size.height *0.1,),

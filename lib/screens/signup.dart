@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fyiproject/constants/colors.dart';
+import 'package:fyiproject/screens/home.dart';
+import 'package:fyiproject/screens/signupPassword.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -215,19 +217,29 @@ class _SignupState extends State<Signup> {
 
                           SizedBox(height: MediaQuery.of(context).size.height *0.05,),
 
-                          Container(
-
-
-                            padding: EdgeInsets.only(top: 8,bottom: 8,left: 20,right: 20),
-
-                            decoration: BoxDecoration(
-                              color: indigodye,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text('Submit',
-                              // style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),
-                              style: GoogleFonts.montserrat(
-                                  fontWeight: FontWeight.w500,color: Colors.white),
+                          InkWell(
+                            onTap: () => {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignupPassword(
+                                          
+                                        )))
+                            },
+                            child: Container(
+                          
+                          
+                              padding: EdgeInsets.only(top: 8,bottom: 8,left: 20,right: 20),
+                          
+                              decoration: BoxDecoration(
+                                color: indigodye,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text('Submit',
+                                // style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),
+                                style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,color: Colors.white),
+                              ),
                             ),
                           ),
                           // SizedBox(height: 20,),
