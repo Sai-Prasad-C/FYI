@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:fyiproject/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'constants/colors.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
-
+class SignupPassword extends StatefulWidget {
+  const SignupPassword({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignupPassword> createState() => _SignupPasswordState();
 }
 
-class _LoginState extends State<Login> {
+class _SignupPasswordState extends State<SignupPassword> {
+  final mycontroller= TextEditingController();
+  @override
+  void dispose(){
+    mycontroller.dispose();
+    super.dispose();
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    // backgroundColor:Colors.blue,
+      // backgroundColor:Colors.blue,
       body: Container(
         height: 1000,
         decoration: BoxDecoration(
@@ -31,16 +37,16 @@ class _LoginState extends State<Login> {
               child: Column(children: <Widget>[
                 SizedBox(
                   // height: 70
-                    height: MediaQuery.of(context).size.height *0.1,
+                  height: MediaQuery.of(context).size.height *0.2,
                 ),
-                Text('FYI.',
-                  // ,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 66,color: Colors.white),
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold,fontSize: 66,color: Colors.white),
-                ),
-                SizedBox(
-                  // height: 40,
-                  height: MediaQuery.of(context).size.height *0.1,
-                ),
+                // Text('FYI.',
+                //   // ,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 66,color: Colors.white),
+                //   style: GoogleFonts.montserrat(fontWeight: FontWeight.bold,fontSize: 66,color: Colors.white),
+                // ),
+                // SizedBox(
+                //   // height: 40,
+                //   height: MediaQuery.of(context).size.height *0.1,
+                // ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -62,18 +68,19 @@ class _LoginState extends State<Login> {
                           ),
                           Container(
                             child:
-                            Text('Login',
+                            Text('Signup',
                               // style: TextStyle(fontSize: 30,color: Colors.black,fontWeight: FontWeight.normal,fontFamily: ),
                               style: GoogleFonts.montserrat(fontWeight: FontWeight.normal,fontSize: 30,color: Colors.black),
-                              ),),
+                            ),),
                           SizedBox(height: 30,),
                           Padding(
                             padding:  EdgeInsets.only(top: 10.0,bottom: 10.0,left: 20.0,right: 20.0),
 
                             child: Container(
                               height: 40,
-                              width: 200,
+                              width: 220,
                               decoration: BoxDecoration(
+
                                 // border: Border.all(color: Colors.blueAccent),
                                 borderRadius: BorderRadius.all(Radius.circular(20)),
                                 color: colomblue,
@@ -81,12 +88,14 @@ class _LoginState extends State<Login> {
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
                                 child: TextField(
+                                  obscureText: true,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'Email',
+                                    hintText: 'Enter Password',
                                     hintStyle: GoogleFonts.montserrat(
-                                        fontWeight: FontWeight.normal,),
+                                      fontWeight: FontWeight.normal,),
                                   ),
+                                  controller: mycontroller,
                                 ),
                               ),
                             ),
@@ -96,7 +105,7 @@ class _LoginState extends State<Login> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               height: 40,
-                              width: 200,
+                              width: 220,
                               decoration: BoxDecoration(
                                 // border: Border.all(color: Colors.blueAccent),
                                 borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -108,15 +117,16 @@ class _LoginState extends State<Login> {
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: " Password",
+                                    hintText: "Confirm Password",
                                     hintStyle: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.normal,),
                                   ),
+                                  controller: mycontroller,
                                 ),
                               ),
                             ),
                           ),
-                          SizedBox(height: 20,),
+                          SizedBox(height: MediaQuery.of(context).size.height *0.05,),
 
                           Container(
 
@@ -127,31 +137,31 @@ class _LoginState extends State<Login> {
                               color: indigodye,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: Text('Signin',
+                            child: Text('SignUp',
                               // style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),
                               style: GoogleFonts.montserrat(
-                                fontWeight: FontWeight.w500,color: Colors.white),
+                                  fontWeight: FontWeight.w500,color: Colors.white),
                             ),
                           ),
-                          SizedBox(height: 20,),
+                          SizedBox(height: MediaQuery.of(context).size.height *0.1,),
 
-                          Container(
-                            child: Text("Dont Have an account?",
-                                style: GoogleFonts.montserrat(
-                                ),),
-
-                          ),
-                          Container(
-                            height: MediaQuery.of(context).size.height *0.03,
-
-                            child: Text("SignUp",
-                              // style: TextStyle(color: lightblu),
-                              style: GoogleFonts.montserrat(
-                                  color: lightblu),
-                            ),),
-
+                          // Container(
+                          //   child: Text("Dont Have an account?",
+                          //     style: GoogleFonts.montserrat(
+                          //     ),),
+                          //
                           // ),
-                          SizedBox(height: 30,),
+                          // Container(
+                          //   height: MediaQuery.of(context).size.height *0.03,
+                          //
+                          //   child: Text("SignUp",
+                          //     // style: TextStyle(color: lightblu),
+                          //     style: GoogleFonts.montserrat(
+                          //         color: lightblu),
+                          //   ),),
+                          //
+                          // // ),
+                          // SizedBox(height: 30,),
 
 
 

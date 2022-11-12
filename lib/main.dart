@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fyiproject/login.dart';
+import 'package:fyiproject/screens/login.dart';
+import 'package:fyiproject/screens/opening.dart';
+import 'package:fyiproject/screens/signup.dart';
+import 'package:fyiproject/screens/signupPassword.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: Opening(),
+
     );
   }
 }
